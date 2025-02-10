@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "build": "marp --theme ./dracula/dracula.css ./slides.md -o slides.html",
+        "watch": "marp -w --theme ./dracula/dracula.css ./slides.md -o slides.html"
+    },
+    "devDependencies": {
+        "@marp-team/marp-cli": "^4.1.1"
+    }
+}

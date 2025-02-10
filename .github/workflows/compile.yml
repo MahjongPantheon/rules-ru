@@ -45,7 +45,7 @@ jobs:
       - name: Make Release Folder
         run: |
           mkdir _site
-          mv rules.pdf index.html _site
+          mv rules.pdf index.html referee-seminar/slides.html _site
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
