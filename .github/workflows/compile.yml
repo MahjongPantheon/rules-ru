@@ -36,7 +36,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: release-${{ env.RELEASE_DATE }}
-          files: *.pdf
+          files: ./*.pdf
       - name: Make Release Folder
         run: |
           mkdir _site
