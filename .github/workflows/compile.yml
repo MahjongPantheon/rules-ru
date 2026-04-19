@@ -36,11 +36,11 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: release-${{ env.RELEASE_DATE }}
-          files: rules.pdf
+          files: *.pdf
       - name: Make Release Folder
         run: |
           mkdir _site
-          mv rules.pdf index.html referee-seminar/slides.html _site
+          mv *.pdf index.html referee-seminar/slides.html _site
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
