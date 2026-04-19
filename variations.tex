@@ -1,0 +1,110 @@
+\documentclass[a4paper]{article}
+\usepackage[height=3\baselineskip]{mahjong}
+\usepackage[skip=10pt plus1pt, indent=40pt]{parskip}
+\usepackage{polyglossia}
+\usepackage{geometry}
+\usepackage{bookmark}
+\usepackage{array}
+\usepackage{float}
+\usepackage{ltablex}
+\usepackage[en]{luaquotes}
+\usepackage{caption, booktabs}
+\usepackage[table]{xcolor}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage[document]{ragged2e}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{silence}
+\usepackage{pdflscape}
+\usepackage{contour}
+\usepackage{ulem}
+\usepackage{fancybox,fancyhdr}
+\usepackage[breakable]{tcolorbox}
+
+\renewcommand{\ULdepth}{1.8pt}
+\renewcommand\ULthickness{1pt}
+\contourlength{0.8pt}
+\newcommand{\lineunder}[1]{%
+	\uline{\phantom{#1}}%
+	\llap{\contour{white}{#1}}%
+}
+
+\setmainlanguage{russian}
+\setotherlanguage{english}
+\setdefaultlanguage{russian}
+\setmainfont{Noto Serif}
+\newfontfamily\cyrillic{Noto Serif Bold}[Script=Cyrillic]
+
+\setlist{noitemsep}
+\renewcommand\labelitemi{$\vcenter{\hbox{\large$\bullet$}}$}
+
+\graphicspath{ {./img/} }
+\pagenumbering{arabic}
+\linespread{1.15}
+
+\fancyhead[RO]{\colorbox{currentfancycolout}{\color{white}{\textbf{\large \thepage}}}}
+\fancyhead[LE]{\colorbox{currentfancycolout}{\color{white}{\textbf{\large \thepage}}}}
+\fancyhead[LO]{\colorbox{lightgrey}{\textbf{\thesection}}}
+\fancyhead[RE]{\colorbox{lightgrey}{\textbf{\thesection}}}
+\fancyhead[CE]{\rightmark}
+
+\hypersetup{
+	colorlinks=false,
+	linktoc=all,
+	hidelinks=true
+}
+
+\renewcommand{\arraystretch}{1.4}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newfontfamily{\nihon}{Noto Serif JP}
+\newcommand{\textnihon}[1]{{\nihon#1}}
+
+\newtcolorbox{example}[2][]{before skip=\baselineskip,breakable,colback=yellow!5!white,colframe=yellow!75!black,colbacktitle=yellow!10!white,coltitle=yellow!20!black,title=\centering{Пример}}
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm,
+}
+
+% TODO: add other authors
+\author{Oleg Klimenko, Kirill Khromov, Annifrid Yumetsuki, Denis Alexandrov}
+\title{Риичи-маджонг: правила и регламенты / Допустимые вариации}
+
+\begin{document}
+	\setlength\parindent{15pt}
+	% Титульная страница
+	\pagestyle{empty}
+	\begin{center}
+		\LARGE
+		{\bfseries Сообщество игроков в риичи-маджонг\par}
+		\vspace{4cm}
+		{\huge\bfseries Риичи-маджонг: правила и регламенты\par}
+		\vspace{3cm}
+		\par
+
+		\normalsize
+		Допустимые вариации правил\par
+		\vspace{5cm}
+		\includegraphics[width=5cm]{logo}
+		\vfill
+		Версия 1.4 от 19 апреля 2026 г.
+	\end{center}
+	\newpage
+
+	\pagestyle{plain}
+
+	% Основной контент
+	\input{./chapters/variations.tex}
+
+\end{document}

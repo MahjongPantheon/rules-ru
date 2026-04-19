@@ -1,10 +1,9 @@
-rules.aux
-rules.log
-rules.pdf
-rules.synctex.gz
-rules.toc
-rules.out
+*.aux
+*.log
+*.pdf
+*.synctex.gz
+*.toc
+*.out
 node_modules/
 fonts/
 .DS_Store
-

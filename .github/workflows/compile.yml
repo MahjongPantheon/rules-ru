@@ -26,12 +26,7 @@ jobs:
       - uses: xu-cheng/texlive-action@v2
         with:
           scheme: full
-          run: |
-            mkdir /usr/share/fonts/extra_fonts && \
-            mv ${GITHUB_WORKSPACE}/fonts/* /usr/share/fonts/extra_fonts/ && \
-            fc-cache -fv && \
-            (lualatex -synctex=1 -interaction=nonstopmode -shell-escape rules.tex || true) && \
-            (lualatex -synctex=1 -interaction=nonstopmode -shell-escape rules.tex || true) # second pass to generate proper ToC
+          run: bash build.sh
       - name: Add new release tag
         if: always()
         run: |
