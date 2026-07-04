@@ -26,3 +26,7 @@ fc-cache -fv
 # Appenfix file
 (lualatex -synctex=1 -interaction=nonstopmode -shell-escape appendix.tex || true)
 (lualatex -synctex=1 -interaction=nonstopmode -shell-escape appendix.tex || true) # second pass to generate proper ToC
+
+# Full file
+(lualatex -synctex=1 -interaction=nonstopmode -shell-escape full.tex || true)
+(lualatex -synctex=1 -interaction=nonstopmode -shell-escape full.tex || true) # second pass to generate proper ToC
